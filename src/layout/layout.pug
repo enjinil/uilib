@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Tailwind UI Library
+        script(src="https://cdn.tailwindcss.com")
+    body
+        header.w-screen.col-span-5.px-4.py-6
+            h1.text-xl.font-bold Tailwind UI Library by enjinil
+        section.flex(style="min-width: 1024px")
+            nav.pl-4.pr-12
+                ul 
+                    each val, index in ['accordion','alert','button','card','code','divider','list','stat','table','tag','breadcrumb','link','form','typography']
+                        li(class='hover:opacity-50 cursor-pointer capitalize mb-1')
+                            a(href='/' + val + '.html')= val
+            main.grow.px-4
+                block content

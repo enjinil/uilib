@@ -1,0 +1,19 @@
+{
+  "name": "uilib",
+  "version": "1.0.0",
+  "description": "Tailwind UI library",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp views",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "enjinil",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-pug": "^5.0.0",
+    "pug": "^3.0.2"
+  }
+}
