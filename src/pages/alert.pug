@@ -1,0 +1,28 @@
+extends ../layout/layout.pug
+block content
+    h2.text-xl.mb-1 Alert 
+    p.text-sm.text-zinc-600.mb-4 Short message informing or instructing user.
+    div
+        .border-2.text-sm.rounded-lg.px-4.py-3.flex.border-yellow-500.bg-yellow-100
+            div.mr-2 ⚠️
+            div
+                .font-bold.text-zinc-900 Feature Update Alert
+                .text-zinc-700 New features are now available! Explore enhancements and optimizations in the latest version. Update now to experience improved performance and functionality.
+        br
+        .border-2.text-sm.rounded-lg.px-4.py-3.flex.border-green-500.bg-green-100
+            div.mr-2 ✅
+            div
+                .font-bold.text-zinc-900 Transaction Confirmation
+                .text-zinc-700 Your recent transaction was successful. Thank you for using our service!
+        br
+        .border-2.text-sm.rounded-lg.px-4.py-3.flex.border-red-500.bg-red-100
+            div.mr-2 🔥
+            div
+                .font-bold.text-zinc-900 Authentication Failed
+                .text-zinc-700 We're sorry, but we couldn't authenticate your login credentials. Please double-check your username and password and try again. If the problem persists, contact support for assistance.
+        br
+        .border-2.text-sm.rounded-lg.px-4.py-3.flex.border-zinc-500.bg-zinc-100
+            div.mr-2 🙎‍♂️
+            div
+                .font-bold.text-zinc-900 Profile Settings Options
+                .text-zinc-700 Did you know you can customize your profile settings to enhance your user experience? Explore theme preferences, notification settings, and privacy controls in your account settings.
