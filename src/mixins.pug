@@ -43,3 +43,16 @@ mixin note
 mixin link(href, name)
   a.text-indigo-600.underline.cursor-pointer(href=href, class="hover:text-indigo-700")&attributes(attributes)
     block
+
+mixin card 
+    .border.border-zinc-200.bg-white&attributes(attributes)
+        block
+mixin card_header 
+    .border-b.border-zinc-200.px-4.py-2
+        block
+mixin card_body 
+    .px-5.py-4
+        block
+mixin card_footer 
+    .border-t.border-zinc-200.px-4.py-2
+        block

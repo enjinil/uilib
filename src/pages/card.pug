@@ -1,0 +1,20 @@
+extends ../layout/layout.pug
+include ../mixins.pug
+block content
+    h2.text-xl.mb-2 Card 
+    
+    +card.mb-4(style="width: 420px")
+        +card_header
+            +title Card title
+        +card_body
+            +text Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nisi voluptate iste, ea assumenda ut voluptas, repellendus tempora nesciunt rerum numquam sequi recusandae exercitationem illum nam consequatur, qui error corporis!
+
+    +card(style="width: 600px")
+        +card_body
+            +title 🧩 Project One
+        +card_footer 
+            .flex 
+                .mr-auto
+                    +note Last updated 2 hours ago.
+                +note 
+                    +link View details
