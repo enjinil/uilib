@@ -1,4 +1,5 @@
 extends ../layout/layout.pug
+include ../mixins/button.pug
 block content
     h2.text-xl.mb-4 Form
     form(style="width: 420px")
@@ -15,15 +16,18 @@ block content
         fieldset.pb-2
             legend.mb-1 Favorite TV Show
             div 
-                label.mr-3
-                    input.mr-2(type="radio", name="Frieren")
+                label.cursor-pointer.whitespace-nowrap.h-8.inline-flex.items-center.mr-3
+                    input.mr-2(type="radio", name="best_anime")
                     span.select-none Frieren
-                label.mr-3
-                    input.mr-2(type="radio", name="Frieren")
+                label.cursor-pointer.whitespace-nowrap.h-8.inline-flex.items-center.mr-3
+                    input.mr-2(type="radio", name="best_anime")
                     span.select-none Fullmetal Alchemist
-                label.mr-3
-                    input.mr-2(type="radio", name="Frieren")
+                label.cursor-pointer.whitespace-nowrap.h-8.inline-flex.items-center.mr-3
+                    input.mr-2(type="radio", name="best_anime")
                     span.select-none Hunter X Hunter
+                label.cursor-pointer.whitespace-nowrap.h-8.inline-flex.items-center.mr-3
+                    input.mr-2(type="radio", name="best_anime", disabled)
+                    span.select-none.text-zinc-600 One Piece
 
         fieldset.pb-2
             legend.mb-1 Are you sure?
@@ -32,5 +36,5 @@ block content
                 span.select-none Yes
 
         div.py-2
-            a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.items-center.border.bg-white.text-gray-800.border-gray-600.mr-4(class="hover:bg-gray-100 focus:ring-2") Cancel
-            a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.items-center.border.bg-blue-500.text-white.border-blue-600(class="hover:bg-blue-600 focus:ring-2") Submit
+            +button_outline(class="mr-2") Cancel
+            +button_primary Submit

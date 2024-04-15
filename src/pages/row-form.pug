@@ -1,4 +1,6 @@
 extends ../layout/layout.pug
+include ../mixins/button.pug
+
 block content
     h2.text-xl.mb-1 Row-Form
     p.text-sm.text-zinc-600.mb-4 Tidy form to create, edit, and delete resource with small number of attributes.
@@ -16,14 +18,14 @@ block content
                 td.pr-2.pb-2 
                     input.px-3.text-gray-700.border.w-full.block.h-8.border-gray-300(class="focus:ring-2", placeholder="Enter value")
                 td.pb-2
-                    a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.items-center.border.bg-white.text-gray-800.border-gray-600(class="hover:bg-gray-100 focus:ring-2") Delete
+                    +button_outline Delete
             tr 
                 td.pr-2.pb-2
                     input.px-3.text-gray-700.border.w-full.block.h-8.border-gray-300(class="focus:ring-2", placeholder="Enter key")
                 td.pr-2.pb-2 
                     input.px-3.text-gray-700.border.w-full.block.h-8.border-gray-300(class="focus:ring-2", placeholder="Enter value")
                 td.pb-2
-                    a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.items-center.border.bg-white.text-gray-800.border-gray-600(class="hover:bg-gray-100 focus:ring-2") Delete
+                    +button_outline Delete
             tr 
                 td.py-2(colspan="3")
-                    a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.items-center.border.bg-white.text-gray-800.border-gray-600(class="hover:bg-gray-100 focus:ring-2") Add New Item
+                    +button_outline Add New Item
