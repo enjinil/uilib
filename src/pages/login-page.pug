@@ -1,0 +1,17 @@
+include ../mixins.pug
+html(lang="en")
+    include ../includes/head.pug
+    body.bg-stone-50.flex.items-center.justify-center.min-h-screen
+        +card(style="min-width: 420px")
+            +card_body 
+                +heading2 Login
+                div.pb-2
+                    label.mb-1(for="text_field_1") Username
+                    input.px-3.text-gray-700.border.w-full.block.h-8.mb-1.border-gray-300(class="focus:ring-2", type="text", name="text_field_1", id="text_field_1")
+                div.pb-2
+                    label.mb-1(for="text_field_1") Password
+                    input.px-3.text-gray-700.border.w-full.block.h-8.mb-1.border-gray-300(class="focus:ring-2", type="text", name="text_field_1", id="text_field_1")
+                .py-2 
+                    +button_primary.w-full Login
+                .py-2.text-sm
+                    +link("/") ← Back to home
