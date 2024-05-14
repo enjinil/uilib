@@ -56,3 +56,15 @@ mixin card_body
 mixin card_footer 
     .border-t.border-zinc-200.px-4.py-2
         block
+
+mixin more_icon 
+    svg(xmlns='http://www.w3.org/2000/svg' height='24px' viewbox='0 -960 960 960' width='24px' fill='currentColor')
+        path(d='M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z')
+
+mixin chevron_left_icon 
+    svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')&attributes(attributes)
+        polyline(points='15 18 9 12 15 6')
+
+mixin chevron_right_icon 
+    svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')&attributes(attributes)
+        polyline(points='9 18 15 12 9 6')
