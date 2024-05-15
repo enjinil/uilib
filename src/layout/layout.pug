@@ -2,9 +2,11 @@ doctype html
 html(lang="en")
     include ../includes/head.pug
     body
-        header.w-screen.col-span-5.px-4.py-6
+        header.w-screen.col-span-5.px-4.py-6.flex
             h1
-                a(href="/").text-xl.font-bold Tailwind UI Library by enjinil
+                a(href="/").text-xl.font-bold Tailwind UI Library
+            span.mx-auto 
+            a(href="https://github.com/enjinil/uilib") https://github.com/enjinil/uilib
         section.flex(style="min-width: 1024px")
             nav.pl-4.pr-12
                 ul 
