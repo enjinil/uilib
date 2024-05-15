@@ -2,8 +2,8 @@ include ../mixins.pug
 html(lang="en")
     include ../includes/head.pug
     body.min-h-screen.bg-stone-50.flex.items-center.justify-center
-        .container
-            +card(style="min-width: 420px")
+        .px-4(style="width: 460px; max-width: 100%")
+            +card
                 +card_body 
                     +heading2 Login
                     div.pb-2
