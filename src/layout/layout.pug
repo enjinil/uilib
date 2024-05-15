@@ -8,7 +8,7 @@ html(lang="en")
         section.flex(style="min-width: 1024px")
             nav.pl-4.pr-12
                 ul 
-                    each val, index in ['accordion','alert','button','card','code','divider','list','stat','table','tag','breadcrumb','link','form', 'row-form','typography']
+                    each val, index in ['accordion','alert','button', 'dropdown','card','code','divider','list','stat','table','tag','breadcrumb','link','form', 'row-form','typography']
                         li(class='hover:opacity-50 cursor-pointer capitalize mb-1')
                             a(href='/' + val + '.html')= val
             main.grow.px-4.py-4.bg-stone-50

@@ -1,0 +1,15 @@
+mixin dropdown
+    .inline-flex.relative.align-top.h-8
+        block 
+
+mixin dropdown_trigger 
+    .z-1.cursor-pointer(onclick="this.nextElementSibling.classList.toggle('hidden')")
+        block 
+
+mixin dropdown_content(align="left")
+    .z-10.mw-20.top-8.absolute.border.bg-white.py-2.rounded-md(class=align+"-0")
+        block
+
+mixin dropdown_item
+    a.px-4.h-8.flex.items-center.justify-start.cursor-pointer(class="hover:bg-blue-50")&attributes(attributes)
+        block

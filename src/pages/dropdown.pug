@@ -1,0 +1,19 @@
+extends ../layout/layout.pug
+include ../includes/dropdown-mixins.pug
+block content
+    h2.text-xl.mb-4 Dropdown
+    +dropdown
+        +dropdown_trigger
+            span Left Dropdown
+        +dropdown_content
+            +dropdown_item Detail
+            +dropdown_item Duplicate 
+            +dropdown_item Delete
+    span.px-12
+    +dropdown
+        +dropdown_trigger
+            span Right Dropdown
+        +dropdown_content("right")
+            +dropdown_item Detail
+            +dropdown_item Duplicate 
+            +dropdown_item Delete
