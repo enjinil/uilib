@@ -1,4 +1,3 @@
-
 mixin button_primary 
     a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.justify-center.items-center.border-2.bg-blue-500.text-white.border-blue-600(class="hover:bg-blue-600 focus:ring-2 "+attributes.class)
         block 
@@ -58,7 +57,7 @@ mixin card_footer
         block
 
 mixin more_icon 
-    svg(xmlns='http://www.w3.org/2000/svg' height='24px' viewbox='0 -960 960 960' width='24px' fill='currentColor')
+    svg(xmlns='http://www.w3.org/2000/svg' height='24px' viewbox='0 -960 960 960' width='24px' fill='currentColor')&attributes(attributes)
         path(d='M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z')
 
 mixin chevron_left_icon 
