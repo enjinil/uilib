@@ -1,0 +1,18 @@
+mixin breadcrumb 
+    .inline-flex.h-8.flex-nowrap.items-center.overflow-hidden.border-2.border-stone-50.bg-stone-200.text-zinc-800.text-sm
+        block 
+
+mixin breadcrumb_start(href="#")
+    a.relative.z-0.pl-4.pl-6.pr-4.cursor-pointer(href=href, class="after:absolute after:-right-3 after:-top-0.5 after:block after:h-6 after:w-6 after:-rotate-45 after:border-b-2 after:border-r-2 after:border-stone-50 after:bg-stone-200 after:content-[''] hover:text-blue-600")
+        span.relative.z-10
+            block 
+
+mixin breadcrumb_item(href="#")
+    a.relative.z-0.pl-4.pl-8.pr-4.cursor-pointer(href=href, class="after:absolute after:-right-3 after:-top-0.5 after:block after:h-6 after:w-6 after:-rotate-45 after:border-b-2 after:border-r-2 after:border-stone-50 after:bg-stone-200 after:content-[''] hover:text-blue-600")
+        span.relative.z-10
+            block 
+
+mixin breadcrumb_end
+    span.flex.h-full.items-center.bg-stone-50.pl-7.pr-6.text-zinc-900
+        block
+
