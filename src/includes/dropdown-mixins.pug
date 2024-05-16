@@ -1,5 +1,5 @@
 mixin dropdown
-    .inline-flex.relative.align-top.h-8
+    .inline-flex.relative.align-top
         block 
 
 mixin dropdown_trigger 
@@ -7,7 +7,7 @@ mixin dropdown_trigger
         block 
 
 mixin dropdown_content(align="left")
-    .z-10.min-w-24.top-8.absolute.border.bg-white.py-2.rounded-md.hidden(class=align+"-0")
+    .z-10.min-w-24.top-full.absolute.border.bg-white.py-2.rounded-md.hidden(class=align+"-0")
         block
 
 mixin dropdown_item
