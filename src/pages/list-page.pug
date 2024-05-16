@@ -1,5 +1,6 @@
 include ../mixins.pug
 include ../includes/breadcrumb-mixins.pug
+include ../includes/dropdown-mixins.pug
 html(lang="en")
     include ../includes/head.pug
     body.min-h-screen.flex.justify-center
@@ -31,7 +32,7 @@ html(lang="en")
                                 th.px-4.py-3.font-bold.cursor-pointer.tracking-wider(class="hover:text-slate-700")
                                     span.underline Views
                                     span.font-normal.ml-1 (DESC)
-                                th.px-2.py-3.font-bold.cursor-pointer.tracking-wider(class="hover:text-slate-700", style="width: 40px")
+                                th.px-2.py-3.font-bold.cursor-pointer.tracking-wider(class="hover:text-slate-700", style="width: 30px")
 
                         tbody
                             tr.border-b.border-stone-200
@@ -39,41 +40,61 @@ html(lang="en")
                                 td.px-4.py-2 Yoasobi 
                                 td.px-4.py-2 129m
                                 td.px-2.py-2.text-stone-500
-                                    button(title="Actions")
-                                        +more_icon(width="18", height="18")
-
+                                    +dropdown 
+                                        +dropdown_trigger
+                                            button(title="Actions")
+                                                +more_icon(width="18", height="18")
+                                        +dropdown_content("right")
+                                            +dropdown_item Detail 
+                                            +dropdown_item Delete
                             tr.border-b.border-stone-200
                                 td.px-4.py-2 Special Z
                                 td.px-4.py-2 King Gnu 
                                 td.px-4.py-2 93m
                                 td.px-2.py-2.text-stone-500
-                                    button(title="Actions")
-                                        +more_icon(width="18", height="18")
-
+                                    +dropdown 
+                                        +dropdown_trigger
+                                            button(title="Actions")
+                                                +more_icon(width="18", height="18")
+                                        +dropdown_content("right")
+                                            +dropdown_item Detail 
+                                            +dropdown_item Delete
                             tr.border-b.border-stone-200
                                 td.px-4.py-2 Show
                                 td.px-4.py-2 Ado
                                 td.px-4.py-2 67m
                                 td.px-2.py-2.text-stone-500
-                                    button(title="Actions")
-                                        +more_icon(width="18", height="18")
-
+                                    +dropdown 
+                                        +dropdown_trigger
+                                            button(title="Actions")
+                                                +more_icon(width="18", height="18")
+                                        +dropdown_content("right")
+                                            +dropdown_item Detail 
+                                            +dropdown_item Delete
                             tr.border-b.border-stone-200
                                 td.px-4.py-2 Kiseki
                                 td.px-4.py-2 Greeeen
                                 td.px-4.py-2 32m
                                 td.px-2.py-2.text-stone-500
-                                    button(title="Actions")
-                                        +more_icon(width="18", height="18")
-
+                                    +dropdown 
+                                        +dropdown_trigger
+                                            button(title="Actions")
+                                                +more_icon(width="18", height="18")
+                                        +dropdown_content("right")
+                                            +dropdown_item Detail 
+                                            +dropdown_item Delete
                             tr.border-b.border-stone-200
                                 td.px-4.py-2 Koi Kogare
                                 td.px-4.py-2 Man With A Mission ⅹ Milet
                                 td.px-4.py-2 28m
                                 td.px-2.py-2.text-stone-500
-                                    button(title="Actions")
-                                        +more_icon(width="18", height="18")
-
+                                    +dropdown 
+                                        +dropdown_trigger
+                                            button(title="Actions")
+                                                +more_icon(width="18", height="18")
+                                        +dropdown_content("right")
+                                            +dropdown_item Detail 
+                                            +dropdown_item Delete
 
                 .flex.items-center.px-4
                     ul.flex.items-center.text-sm.text-slate-500.pt-4.pb-2
