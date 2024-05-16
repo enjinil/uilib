@@ -7,9 +7,9 @@ mixin dropdown_trigger
         block 
 
 mixin dropdown_content(align="left")
-    .z-10.min-w-24.top-full.absolute.border.bg-white.py-2.rounded-md.hidden(class=align+"-0")
+    .z-10.min-w-24.top-full.absolute.border.bg-white.py-2.rounded-md.text-stone-600.hidden(class=align+"-0")
         block
 
 mixin dropdown_item
-    a.px-4.h-8.flex.items-center.justify-start.cursor-pointer(class="hover:bg-blue-50")&attributes(attributes)
+    a.px-4.h-8.flex.items-center.justify-start.cursor-pointer(class="hover:bg-blue-50 hover:text-stone-800")&attributes(attributes)
         block
