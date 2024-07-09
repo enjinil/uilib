@@ -1,3 +1,4 @@
+//- Buttons
 mixin button_primary 
     a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.justify-center.items-center.border-2.rounded.bg-blue-500.text-white.border-blue-600(class="hover:bg-blue-600 focus:ring-2 "+attributes.class)
         block 
@@ -17,6 +18,7 @@ mixin button_warning
     a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.justify-center.items-center.border-2.rounded.bg-yellow-600.text-white.border-yellow-700(class="hover:bg-yellow-700 focus:ring-2 "+attributes.class)
         block
 
+//- Typography
 mixin heading1
     h1.text-4xl.font-bold.text-slate-900.mb-4
         block 
@@ -30,7 +32,7 @@ mixin heading4
     h4.text-xl.font-bold.text-slate-900.mb-1
         block
 mixin title
-    span.text-lg.font-bold.text-slate-800
+    span.text-lg.font-semibold.text-slate-800
         block
 mixin text 
     p.text-base.text-slate-700
@@ -43,6 +45,7 @@ mixin link(href)
   a.text-indigo-600.underline.cursor-pointer(href=href, class="hover:text-indigo-700")&attributes(attributes)
     block
 
+//- Card
 mixin card 
     .border.border-zinc-200.bg-white&attributes(attributes)
         block
@@ -56,6 +59,7 @@ mixin card_footer
     .border-t.border-zinc-200.px-4.py-2
         block
 
+//- Icon
 mixin more_icon 
     svg(xmlns='http://www.w3.org/2000/svg' height='24px' viewbox='0 -960 960 960' width='24px' fill='currentColor')&attributes(attributes)
         path(d='M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z')
@@ -67,3 +71,7 @@ mixin chevron_left_icon
 mixin chevron_right_icon 
     svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')&attributes(attributes)
         polyline(points='9 18 15 12 9 6')
+
+//- Image
+mixin avatar_img(url, alt)
+    img.rounded-full(src=url, alt=alt, width="48")&attributes(attributes)
