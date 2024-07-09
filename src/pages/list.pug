@@ -1,0 +1,33 @@
+extends ../layout/layout.pug
+include ../mixins.pug
+block content
+    h2.text-xl.mb-1 List 
+    p.text-sm.text-zinc-600.mb-4 Horizontal list components.
+      
+    div(style="max-width: 360px")
+      +card.mb-4 
+        +card_header 
+          +title Basic List 
+        div
+          each _ in [1, 2, 3]
+            .px-3.py-2.border-b.border-stone-200 
+              div List item
+
+    div(style="max-width: 480px")
+      +card.mb-4 
+        +card_header 
+          +title List with Image and Controls
+        div
+          each _ in [1, 2, 3]
+            .px-3.py-2.border-b.border-stone-200 
+              .flex.items-center
+                +avatar_img("/assets/images/image128.png").mr-4
+                div.min-w-0
+                  div List Item
+                  div.truncate.text-sm.text-slate-500 
+                    | Item description that is very long overflowing the space available
+                div.flex.ml-auto
+                  +button_outline Detail
+                  +button_outline.pr-2.pl-2.ml-2
+                    +more_icon(width="18", height="18")
+        
