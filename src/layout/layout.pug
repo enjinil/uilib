@@ -1,14 +1,14 @@
 doctype html
 html(lang="en")
     include ../includes/head.pug
-    body
-        header.w-screen.col-span-5.px-4.py-6.flex
+    body.min-h-screen.flex.flex-col
+        header.w-screen.col-span-5.px-4.py-6.flex.border-b.border-stone-200
             h1
                 a(href="/").text-xl.font-bold Tailwind UI Library
             span.mx-auto 
             a(href="https://github.com/enjinil/uilib") https://github.com/enjinil/uilib
-        section.flex(style="min-width: 1024px")
-            nav.pl-4.pr-12
+        section.grow.min-h-vh.flex(style="min-width: 1024px")
+            nav.py-4.pr-12.pl-4.border-r.border-stone-200
                 ul 
                     each val, index in ['accordion','alert','button', 'dropdown','card','code','divider','list','stat','table','tag','breadcrumb','link','form', 'row-form','typography']
                         li(class='hover:opacity-50 cursor-pointer capitalize mb-1')
