@@ -1,0 +1,36 @@
+extends ../layout/layout.pug
+include ../mixins.pug
+include ../includes/dropdown-mixins.pug
+block content
+    h2.text-xl.mb-4 Stat 
+      
+    div(style="max-width: 360px")
+      .flex.items-center.bg-white.border.border-stone-200.rounded.px-4.py-3
+        .flex.bg-blue-600.text-white.h-12.w-12.p-2.rounded.mr-3
+          img(src="/assets/icons/feather-dollar-sign-white.svg", alt="sales")
+        .grow.min-w-0
+          +title 256 Sales
+          .truncate.text-sm.text-slate-500  16 on process sales.
+        .text-green-600.text-lg(title="Up 10% last 7 days") ⤴ 10%
+
+    br
+
+    div(style="max-width: 360px")
+      .bg-white.border.border-stone-200.rounded
+        .flex.items-start.px-4.py-3
+          .grow.min-w-0
+            .truncate.text-slate-400 
+              +overnote REVENUE
+            .flex 
+              +title 256 Sales
+              .text-red-600.text-lg.ml-2(title="Up 7.5% last 7 days") ⤵ 7.5%
+          +dropdown
+            +dropdown_trigger
+                .py-1.text-sm.text-slate-400 
+                  | Last 7 days ⌄
+            +dropdown_content("right")
+                +dropdown_item Last 7 days
+                +dropdown_item Last month 
+                +dropdown_item Last year
+        .bg-slate-100.text-slate-600.p-4 
+          | [ PLACE CHART HERE ]
