@@ -2,10 +2,14 @@ extends ../layout/layout.pug
 include ../mixins.pug
 block content
     h2.text-xl.mb-4 Button
-    div
+    div.mb-4
         +button_primary Primary
         +button_secondary Secondary
         +button_outline Outline
         +button_success Success
         +button_primary Danger
         +button_warning Warning
+    div
+        div.mb-2
+            +text Loading
+        +button_loading Loading

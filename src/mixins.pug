@@ -17,6 +17,13 @@ mixin button_danger
 mixin button_warning
     a.text-sm.h-8.px-4.py-1.cursor-pointer.inline-flex.justify-center.items-center.border-2.rounded.bg-yellow-600.text-white.border-yellow-700(class="hover:bg-yellow-700 focus:ring-2 "+attributes.class)
         block
+mixin button_loading
+    a.text-sm.h-8.px-4.py-1.pointer-events-none.inline-flex.justify-center.items-center.relative(class=attributes.class)
+        block
+        span.absolute.inline-flex.justify-center.items-center.rounded.text-stone-600.bg-stone-200.top-0.bottom-0.left-0.right-0
+            svg(xmlns='http://www.w3.org/2000/svg' height="16px" viewbox='0 -960 960 960' width="16px" fill='currentColor').animate-spin
+                path(d='M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q17 0 28.5 11.5T520-840q0 17-11.5 28.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-17 11.5-28.5T840-520q17 0 28.5 11.5T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Z')
+
 
 //- Typography
 mixin heading1
