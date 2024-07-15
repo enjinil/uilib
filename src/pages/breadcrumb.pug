@@ -1,8 +1,11 @@
 extends ../layout/layout.pug
+include ../mixins.pug
 include ../includes/breadcrumb-mixins.pug
 block content
     h2.text-xl.mb-4 Breadcrumb
+
     +breadcrumb
-        +breadcrumb_start Home
+        +breadcrumb_item Home
         +breadcrumb_item Products
-        +breadcrumb_end Categories
+        +breadcrumb_active Edit
+        
